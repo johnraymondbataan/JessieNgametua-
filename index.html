@@ -1,0 +1,1109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Jessie Ngametua - Digital Creator & Mom Life</title>
+    
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Jessie Ngametua",
+        "jobTitle": "Digital Creator",
+        "description": "Digital Creator & Mom sharing authentic life content",
+        "url": "#",
+        "sameAs": []
+    }
+    </script>
+    <style>
+        /* CSS Custom Properties (Variables) */
+        :root {
+            --primary-color: #ff69b4;
+            --secondary-color: #323232;
+            --background-color: #FFF2F9;
+            --text-color: #323232;
+            --animation-duration: 0.3s;
+            --border-radius: 8px;
+            --shadow-light: 0 2px 10px rgba(0,0,0,0.1);
+            --shadow-medium: 0 4px 20px rgba(0,0,0,0.15);
+            --transition-smooth: all var(--animation-duration) ease-in-out;
+        }
+        
+        @font-face {
+            font-family: 'The Seasons';
+            src: url('https://fonts.cdnfonts.com/css/the-seasons') format('truetype');
+        }
+        
+        /* Accessibility: Reduced Motion Support */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        body {
+            font-family: 'Josefin Sans', sans-serif;
+            color: var(--text-color);
+            background-color: var(--background-color);
+        }
+        
+        /* Focus styles for accessibility */
+        *:focus {
+            outline: 2px solid var(--primary-color);
+            outline-offset: 2px;
+        }
+        
+        /* Skip to main content link for screen readers */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 6px;
+            background: var(--primary-color);
+            color: white;
+            padding: 8px;
+            text-decoration: none;
+            border-radius: var(--border-radius);
+            z-index: 1000;
+        }
+        
+        .skip-link:focus {
+            top: 6px;
+        }
+        
+        .font-the-seasons {
+            font-family: 'The Seasons', sans-serif;
+        }
+        
+        .hero-section {
+            background: linear-gradient(to right, #FFF2F9 50%, rgba(255, 255, 255, 0.7));
+            position: relative;
+        }
+        
+        .hero-section.with-bg-image {
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+        
+        .hero-section.with-bg-image::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             left: 0;
+             right: 0;
+             bottom: 0;
+             background: none;
+             z-index: 1;
+         }
+        
+        .hero-section .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .btn-primary {
+            background-color: #FE83C6;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: #FA4EAB;
+            transform: translateY(-2px);
+        }
+        
+        .nav-link {
+            position: relative;
+            text-decoration: none;
+            border: none;
+            background: none;
+            outline: none;
+        }
+        
+        .nav-link:focus {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+        
+        .nav-link:active {
+            outline: none;
+            border: none;
+            box-shadow: none;
+        }
+        
+        .nav-link:hover {
+            color: #FA4EAB;
+        }
+        
+        .nav-link:hover::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #FA4EAB;
+            transform: scaleX(1);
+            transition: transform 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: #FA4EAB;
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+        
+        .section-title {
+            position: relative;
+            display: inline-block;
+            width: 100%;
+            text-align: center;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 20%;
+            height: 3px;
+            bottom: -8px;
+            left: 50%;
+            transform: translateX(-50%) scaleX(0);
+            transform-origin: left;
+            background: linear-gradient(to right, #323232, #FA4EAB);
+            animation: drawLine 2s ease-out infinite;
+            animation-delay: 0.5s;
+        }
+        
+        @keyframes drawLine {
+            0% {
+                transform: translateX(-50%) scaleX(0);
+            }
+            50% {
+                transform: translateX(-50%) scaleX(1);
+            }
+            75% {
+                transform: translateX(-50%) scaleX(1);
+            }
+            100% {
+                transform: translateX(-50%) scaleX(0);
+            }
+        }
+        
+        .social-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .social-icon:hover {
+            transform: scale(1.1);
+            color: #FA4EAB;
+        }
+        
+        .tiktok-card:hover, .youtube-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(254, 131, 198, 0.2);
+        }
+        
+        /* Custom Scrollbar Styles */
+        .youtube-sidebar-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: #F9A8D4 #F3F4F6;
+        }
+        
+        .youtube-sidebar-scroll::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .youtube-sidebar-scroll::-webkit-scrollbar-track {
+            background: #F3F4F6;
+            border-radius: 4px;
+        }
+        
+        .youtube-sidebar-scroll::-webkit-scrollbar-thumb {
+            background: #F9A8D4;
+            border-radius: 4px;
+            transition: background 0.3s ease;
+        }
+        
+        .youtube-sidebar-scroll::-webkit-scrollbar-thumb:hover {
+            background: #F472B6;
+        }
+        
+        /* YouTube Section Black Shadow Hover Effects */
+        .youtube-video-hover:hover {
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .youtube-main-video:hover {
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            transform: translateY(-3px);
+        }
+        
+        /* TikTok Video Cards with YouTube-style hover effects */
+         .tiktok-video-hover:hover {
+             box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+             transform: translateY(-2px);
+         }
+        
+        .fade-in {
+            animation: fadeIn 1s ease-in;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        /* Book Style Effects */
+         .book-style {
+             position: relative;
+             background: linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%);
+             box-shadow: 
+                 0 4px 8px rgba(0,0,0,0.1),
+                 0 8px 16px rgba(0,0,0,0.1),
+                 inset 0 1px 0 rgba(255,255,255,0.8);
+             transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+             cursor: pointer;
+         }
+         
+         .book-style:hover {
+             transform: translateY(-8px) rotateX(5deg) rotateY(-2deg);
+             box-shadow: 
+                 0 12px 24px rgba(0,0,0,0.15),
+                 0 20px 40px rgba(0,0,0,0.1),
+                 0 0 0 1px rgba(254,131,198,0.3),
+                 inset 0 1px 0 rgba(255,255,255,0.9);
+             background: linear-gradient(135deg, #ffffff 0%, #fefefe 100%);
+         }
+         
+         .book-style::before {
+             content: '';
+             position: absolute;
+             top: 0;
+             right: -4px;
+             bottom: 0;
+             width: 4px;
+             background: linear-gradient(to bottom, #e0e0e0, #bdbdbd);
+             border-radius: 0 4px 4px 0;
+             box-shadow: 1px 0 3px rgba(0,0,0,0.2);
+             transition: all 0.4s ease;
+         }
+         
+         .book-style:hover::before {
+             background: linear-gradient(to bottom, #FE83C6, #FA4EAB);
+             box-shadow: 2px 0 6px rgba(254,131,198,0.4);
+         }
+         
+         .book-style::after {
+             content: '';
+             position: absolute;
+             top: 4px;
+             right: -8px;
+             bottom: 4px;
+             width: 4px;
+             background: linear-gradient(to bottom, #f5f5f5, #e0e0e0);
+             border-radius: 0 2px 2px 0;
+             box-shadow: 1px 0 2px rgba(0,0,0,0.1);
+             transition: all 0.4s ease;
+         }
+         
+         .book-style:hover::after {
+             background: linear-gradient(to bottom, #FFF2F9, #FE83C6);
+             box-shadow: 2px 0 4px rgba(254,131,198,0.3);
+         }
+         
+         /* Page flip animation effect */
+         .book-style:hover .space-y-4 {
+             animation: pageFlip 0.6s ease-out;
+         }
+         
+         @keyframes pageFlip {
+             0% { transform: perspective(400px) rotateY(0deg); }
+             50% { transform: perspective(400px) rotateY(-15deg); }
+             100% { transform: perspective(400px) rotateY(0deg); }
+         }
+        
+        .placeholder-img {
+            background-color: #e2e8f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #94a3b8;
+            font-weight: 500;
+        }
+        
+        /* Horizontal Scroll Styling for TikTok Section */
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        
+        .video-card {
+            min-width: 320px;
+            flex-shrink: 0;
+        }
+        
+        /* Custom scrollbar for better UX */
+        .tiktok-scroll {
+            scrollbar-width: thin;
+            scrollbar-color: #FE83C6 #f1f1f1;
+        }
+        
+        .tiktok-scroll::-webkit-scrollbar {
+            height: 8px;
+        }
+        
+        .tiktok-scroll::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .tiktok-scroll::-webkit-scrollbar-thumb {
+            background: linear-gradient(90deg, #FE83C6, #FA4EAB);
+            border-radius: 10px;
+        }
+        
+        .tiktok-scroll::-webkit-scrollbar-thumb:hover {
+            background: linear-gradient(90deg, #FA4EAB, #FE83C6);
+        }
+        
+        /* Word-by-word fade-in slow motion animation */
+        .word-fade-container {
+            overflow: hidden;
+        }
+        
+        .word-fade {
+            display: inline-block;
+            opacity: 0;
+            transform: translateY(20px) scale(0.8);
+            animation: fadeInWord 20s ease-in-out infinite;
+        }
+        
+        .word-fade:nth-child(1) { animation-delay: 0.2s; }
+        .word-fade:nth-child(2) { animation-delay: 0.6s; }
+        .word-fade:nth-child(3) { animation-delay: 1.0s; }
+        .word-fade:nth-child(4) { animation-delay: 1.4s; }
+        .word-fade:nth-child(5) { animation-delay: 1.8s; }
+        .word-fade:nth-child(6) { animation-delay: 2.2s; }
+        .word-fade:nth-child(7) { animation-delay: 2.6s; }
+        .word-fade:nth-child(8) { animation-delay: 3.0s; }
+        .word-fade:nth-child(9) { animation-delay: 3.4s; }
+        .word-fade:nth-child(10) { animation-delay: 3.8s; }
+        .word-fade:nth-child(11) { animation-delay: 4.2s; }
+        .word-fade:nth-child(12) { animation-delay: 4.6s; }
+        
+        /* Mobile Responsive Styles */
+        @media (max-width: 768px) {
+            .hero-section .hero-content {
+                text-align: center;
+            }
+            
+            .hero-section .hero-content h1 {
+                text-align: center;
+            }
+            
+            .hero-section .hero-content p {
+                text-align: center;
+            }
+            
+            /* Mobile-specific background image */
+            .hero-section.with-bg-image {
+                background-image: url('Images/bbbgggg.png') !important;
+                background-size: cover;
+                background-position: center;
+                background-repeat: no-repeat;
+            }
+            
+            .hero-section.with-bg-image::before {
+                 opacity: 0.5;
+             }
+            
+            .hero-section .hero-content .relative {
+                display: flex;
+                justify-content: center;
+            }
+            
+            .gallery-thumbnail {
+                width: 50px;
+                height: 50px;
+            }
+            
+            .flex.flex-wrap.gap-2.mb-4 {
+                justify-content: center !important;
+            }
+        }
+        
+        @keyframes fadeInWord {
+            0% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.8);
+            }
+            15% {
+                opacity: 0.7;
+                transform: translateY(-5px) scale(1.05);
+            }
+            25% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            75% {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+            85% {
+                opacity: 0.7;
+                transform: translateY(-5px) scale(1.05);
+            }
+            100% {
+                opacity: 0;
+                transform: translateY(20px) scale(0.8);
+            }
+        }
+        
+        /* Special styling for the name span */
+        .name-highlight .word-fade {
+            color: #FE83C6;
+        }
+    </style>
+</head>
+<body class="overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-[#FFF2F9] shadow-sm">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <!-- Logo placeholder -->
+            <div class="flex items-center">
+                <span class="font-the-seasons text-lg md:text-xl font-bold border-b-2 border-pink-800 bg-gradient-to-r from-[#323232] to-[#FA4EAB] bg-clip-text text-transparent">Jessie Ngametua</span>
+            </div>
+            
+            <!-- Mobile menu button -->
+            <button id="mobile-menu-button" class="md:hidden focus:outline-none">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                </svg>
+            </button>
+            
+            <!-- Desktop menu -->
+            <div class="hidden md:flex space-x-10 text-black">
+                <a href="#home" class="nav-link font-medium hover:text-[#FA4EAB] transition duration-300">Home</a>
+                <a href="#about" class="nav-link font-medium hover:text-[#FA4EAB] transition duration-300">About</a>
+                <a href="#tiktok" class="nav-link font-medium hover:text-[#FA4EAB] transition duration-300">TikTok</a>
+                <a href="#instagram" class="nav-link font-medium hover:text-[#FA4EAB] transition duration-300">Instagram</a>
+                <a href="#youtube" class="nav-link font-medium hover:text-[#FA4EAB] transition duration-300">YouTube</a>
+            </div>
+        </div>
+        
+        <!-- Mobile menu -->
+        <div id="mobile-menu" class="hidden md:hidden fixed top-0 left-0 w-64 h-full bg-gray-900 text-white z-50 shadow-lg">
+            <div class="p-6">
+                <div class="mb-8">
+                    <span class="font-the-seasons text-xl font-bold text-white">Menu</span>
+                </div>
+                <nav class="space-y-2">
+                    <a href="#home" class="flex items-center py-3 px-4 text-white hover:bg-gray-800 hover:text-[#FA4EAB] transition duration-300 rounded-lg group">
+                        <svg class="w-5 h-5 mr-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path d="M10.707 2.293a1 1 0 00-1.414 0l-7 7a1 1 0 001.414 1.414L4 10.414V17a1 1 0 001 1h2a1 1 0 001-1v-2a1 1 0 011-1h2a1 1 0 011 1v2a1 1 0 001 1h2a1 1 0 001-1v-6.586l.293.293a1 1 0 001.414-1.414l-7-7z"/>
+                        </svg>
+                        <span class="font-medium">Home</span>
+                    </a>
+                    <a href="#about" class="flex items-center py-3 px-4 text-white hover:bg-gray-800 hover:text-[#FA4EAB] transition duration-300 rounded-lg group">
+                        <svg class="w-5 h-5 mr-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="font-medium">About</span>
+                    </a>
+                    <a href="#tiktok" class="flex items-center py-3 px-4 text-white hover:bg-gray-800 hover:text-[#FA4EAB] transition duration-300 rounded-lg group">
+                        <svg class="w-5 h-5 mr-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="font-medium">TikTok</span>
+                    </a>
+                    <a href="#youtube" class="flex items-center py-3 px-4 text-white hover:bg-gray-800 hover:text-[#FA4EAB] transition duration-300 rounded-lg group">
+                        <svg class="w-5 h-5 mr-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M3 4a1 1 0 011-1h12a1 1 0 011 1v2a1 1 0 01-1 1H4a1 1 0 01-1-1V4zM3 10a1 1 0 011-1h6a1 1 0 011 1v6a1 1 0 01-1 1H4a1 1 0 01-1-1v-6zM14 9a1 1 0 00-1 1v6a1 1 0 001 1h2a1 1 0 001-1v-6a1 1 0 00-1-1h-2z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="font-medium">YouTube</span>
+                    </a>
+                    <a href="#instagram" class="flex items-center py-3 px-4 text-white hover:bg-gray-800 hover:text-[#FA4EAB] transition duration-300 rounded-lg group">
+                        <svg class="w-5 h-5 mr-3 text-yellow-400" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clip-rule="evenodd"/>
+                        </svg>
+                        <span class="font-medium">Instagram</span>
+                    </a>
+                </nav>
+            </div>
+            <!-- Close button -->
+            <button id="mobile-menu-close" class="absolute top-4 right-4 text-white hover:text-[#FA4EAB] transition duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section with-bg-image min-h-screen flex items-center fade-in" style="background-image: url('Images/Hero\ BG.png');">
+        <div class="container mx-auto px-4 py-20 md:py-0 hero-content">
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0">
+                    <h1 class="font-the-seasons text-4xl md:text-6xl font-bold mb-6 leading-tight word-fade-container">
+                        <span class="">Hi,</span> <span class="word-fade">I'm</span> <span class="word-fade name-highlight"><span class="text-black font-bold md:text-7xl word-fade">JESSIE</span></span> <span class="word-fade name-highlight"><span class="text-black font-bold md:text-7xl word-fade">NGAMETUA</span></span> <br> <span class="">Digital</span> <span class="">Creator</span> <br> <span class="word-fade">&</span> <span class="">Mom</span> <span class="">Life</span>
+                    </h1>
+                    <p class="text-xl mb-8 text-black">
+                        Raising awareness about ASD, ADHD, and chronic illness – <br> one story at a time.
+                    </p>
+                            <div class="relative">
+                                    <a href="https://www.youtube.com/channel/UC0ANPMmbDQg8KZfBYflXrnA" target="_blank" class="bg-gradient-to-r from-[#FE83C6] to-[#FFF2F9] text-black font-bold py-3 px-8 rounded-full inline-block shadow-lg hover:shadow-xl hover:scale-105 hover:from-[#FA4EAB] hover:to-[#323232] transition-all duration-300 transform">
+                                    Let's Connect
+                                    </a>
+                                    </div>
+                             </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-20 bg-gradient-to-r from-[#FFF2F9] to-[#FE83C6] fade-in border-b-2 border-pink-100 rounded-lg p-4">
+        <div class="container mx-auto px-4">   
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-10 md:mb-0 md:pr-10">
+                    <div class="w-full h-full rounded-2xl overflow-hidden placeholder-img animate-float">
+                        <img src="Images/Jessieee.jpg" class="w-full h-full object-cover" alt="Jessie's Portrait">
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                   <h2 class="text-5xl font-extrabold mb-4 text-center section-title font-the-seasons text-blackt">About Jessie</h2>
+                    <p class="text-lg text-black font-semibold mb-6 text-center border-b-2 border-pink-100 rounded-lg p-4">
+                        Wife 💍 | Mother 🧩 | Life | Kids | ASD | ADHD | Chronic Illness
+                    </p>
+                    <div class="bg-white p-8 rounded-lg shadow-2xl border-l-8 border-[#323232] relative book-style"> 
+                        <!-- Book spine effect -->
+                        <div class="absolute -left-2 top-0 bottom-0 w-4 bg-gradient-to-r from-[#323232] to-[#555] rounded-l-lg shadow-lg"></div>
+                        <!-- Page lines effect -->
+                        <div class="absolute left-12 top-0 bottom-0 w-px bg-red-300 opacity-50"></div>
+                        <div class="absolute left-16 top-0 bottom-0 w-px bg-blue-200 opacity-30"></div>
+                        
+                        <h3 class=" pl-8 text-2xl font-bold mb-6 font-the-seasons text-[#323232] italic border-b border-gray-300 pb-2 text-center">"Sharing real moments. Building awareness. Creating joy."</h3>
+                        
+                        <div class="space-y-4 text-gray-700 leading-relaxed font-serif ml-8">
+                            <p class="mb-4 indent-8 text-justify pl-4">
+                                As a digital creator and mother, I'm passionate about sharing the authentic journey of parenting neurodivergent children while navigating chronic illness. My content blends education with everyday moments to build understanding and community.
+                            </p>
+                            <p class="mb-4 indent-8 text-justify pl-4">
+                                What began as personal documentation has grown into a platform for advocacy and connection. Through storytelling, I aim to normalize conversations around neurodiversity and chronic health conditions.
+                            </p>
+                            <p class="mb-6 indent-8 text-justify pl-4">
+                                When I'm not creating content, you'll find me enjoying simple moments with my family, advocating for inclusive education, or collaborating with brands that align with my values.
+                    </p>
+                    </div>
+        
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TikTok Section -->
+   <section id="tiktok" class="py-20 bg-gradient-to-br from-[#FFF2F9] to-[#FFF2F9] border-b-2 border-pink-100 rounded-lg p-4 fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold mb-4 text-center section-title font-the-seasons bg-gradient-to-r from-[#323232] to-[#FA4EAB] bg-clip-text text-transparent">TikTok Featured</h2>
+            <p class=" pt-5 text-xl text-black text-center mb-12 max-w-2xl mx-auto border-b-2 border-pink-300 rounded-lg p-4">Vlogging motherhood, daily life, and raising kids with love and laughter. Follow for family content, relatable stories, and everyday joy.</p>
+            
+            <div class="flex overflow-x-auto gap-8 mb-12 pb-4 tiktok-scroll" style="scroll-behavior: smooth;">
+                <!-- Video Card 1 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:shadow-lg hover:shadow-[#FE83C6] tiktok-video-hover">
+                    <div class="relative">
+                        <video class="w-full h-64 object-contain bg-black" controls preload="metadata" poster="">
+                            <source src="Images/I'm Enough.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    
+                    </div>
+                    <div class="p-4 bg-black">
+                        <h3 class="font-bold mb-2 flex items-center text-white hover:underline hover:decoration-black transition duration-300">I a'm Enough <br style="color: blueviolet;"> #enough #worth #womenempowerment #worth</h3>
+                        <p class="text-sm text-white">▷ 1,143</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 2 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:shadow-lg hover:shadow-[#FE83C6] tiktok-video-hover">
+                    <div class="relative">
+                        <video class="w-full h-64 object-contain bg-black" controls preload="metadata" poster="">
+                            <source src="Images/Pretty Mum.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+
+                    </div>
+                    <div class="p-4 bg-black">
+                        <h3 class="font-bold mb-2 text-white hover:underline hover:decoration-black transition duration-300">Pretty mumma's 😜 <br> #prettygirls #slay #confident #creatorsearching </h3>
+                        <p class="text-sm text-white">▷ 1,000</p>
+                    </div>
+                </div>
+                
+                <!-- Video Card 3 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:shadow-lg hover:shadow-[#FE83C6] tiktok-video-hover">
+                    <div class="relative">
+                        <video class="w-full h-64 object-contain bg-black" controls preload="metadata" poster="">
+                            <source src="Images/Dogs Shampoo.mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-4 bg-black">
+                        <h3 class="font-bold mb-2 text-white hover:underline hover:decoration-black transition duration-300">Our big boy got his wash today using euclove's <br>  #eucloveclean #allnatural #dogwash</h3>
+                        <p class="text-sm text-white">▷ 773</p>
+                    </div>
+                </div> 
+
+
+                <!-- Video Card 4 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:shadow-lg hover:shadow-[#FE83C6] tiktok-video-hover">
+                    <div class="relative">
+                        <video class="w-full h-64 object-contain bg-black" controls preload="metadata" poster="">
+                            <source src="Images/Myday.mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-4 bg-black">
+                        <h3 class="font-bold mb-2 text-white hover:underline hover:decoration-black transition duration-300">Some snippets from my day yesterday 😊 <br>  #mumlife #creatorsearchinsights #mumvlog #lunch</h3>
+                        <p class="text-sm text-white">▷ 930</p>
+                    </div>
+                </div> 
+
+                <!-- Video Card 5 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:shadow-lg hover:shadow-[#FE83C6] tiktok-video-hover">
+                    <div class="relative">
+                        <video class="w-full h-64 object-contain bg-black" controls preload="metadata" poster="">
+                            <source src="Images/GoodAM.mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-4 bg-black">
+                        <h3 class="font-bold mb-2 text-white hover:underline hover:decoration-black transition duration-300">Good morning 😊 <br>#morning #creatorsearchinsights #goodmorning</h3>
+                        <p class="text-sm text-white">▷ 773</p>
+                    </div>
+                </div> 
+
+                <!-- Video Card 6 -->
+                <div class="video-card bg-white rounded-xl overflow-hidden shadow-md transition duration-300 hover:shadow-lg hover:shadow-[#FE83C6] tiktok-video-hover">
+                    <div class="relative">
+                        <video class="w-full h-64 object-contain bg-black" controls preload="metadata" poster="">
+                            <source src="Images/GiveAway.mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-4 bg-black">
+                        <h3 class="font-bold mb-2 text-white hover:underline hover:decoration-black transition duration-300">Magnetic lash giveaway! Will announce on Wednesday <br> evening 😘 <br>   #lashes #giveaway #magnetic </h3>
+                        <p class="text-sm text-white">▷ 773</p>
+                    </div>
+                </div> 
+
+
+            </div>
+            
+            <div class="text-center relative">
+                <!-- Arrow pointing to button -->
+                <div class="arrow-pointer mb-4 mx-auto w-0 h-0 border-l-[15px] border-r-[15px] border-t-[20px] border-l-transparent border-r-transparent border-t-[#FA4EAB] animate-bounce"></div>
+                
+                <a href="https://www.tiktok.com/@jessiengametua" target="_blank" class="bg-gradient-to-r from-[#323232] to-[#FA4EAB] text-white font-bold py-3 px-8 rounded-full inline-block shadow-lg hover:shadow-xl hover:scale-105 hover:from-[#FA4EAB] hover:to-[#323232] transition-all duration-300 transform">
+                    Follow Me on TikTok
+                </a>
+            </div>
+        </div>
+    </section>
+
+     <!-- Instagram Section -->
+    <section id="instagram" class="py-20 bg-gradient-to-br from-[#FE83C6] to-[#FFF2F9] border-b-2 border-pink-100 rounded-lg p-4 fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold mb-4 text-center section-title font-the-seasons bg-gradient-to-r from-[#323232] to-[#FA4EAB] bg-clip-text text-transparent">Instagram</h2>
+            <p class=" pt-5 text-xl text-black text-center mb-12 max-w-2xl mx-auto border-b-2 border-pink-300 rounded-lg p-4">Capturing real-life moments, lifestyle snapshots, and a behind-the-scenes.</p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+                <!-- Instagram Post 1 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-105">
+                    <!-- Instagram Image -->
+                    <div class="relative">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DLZgBblyv_G/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DLZgBblyv_G/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DLZgBblyv_G/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Jessie Ngametua (@scottishquine)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+
+                <!-- Instagram Post 2 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-105">
+                    <!-- Instagram Image -->
+                    <div class="relative">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DLJQ-HMy6ks/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DLJQ-HMy6ks/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DLJQ-HMy6ks/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Jessie Ngametua (@scottishquine)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+
+                <!-- Instagram Post 3 -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden transition duration-300 hover:shadow-xl hover:scale-105">
+                    <!-- Instagram Image -->
+                    <div class="relative">
+                        <blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/reel/DLgUIxxSWbE/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="14" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:540px; min-width:326px; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/reel/DLgUIxxSWbE/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;">View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center; margin-bottom: 24px;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 224px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 144px;"></div></div></a><p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;"><a href="https://www.instagram.com/reel/DLgUIxxSWbE/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none;" target="_blank">A post shared by Jessie Ngametua (@scottishquine)</a></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script>
+                    </div>
+                </div>
+                
+                
+            </div>
+            
+            <div class="text-center relative">
+                <!-- Arrow pointing to button -->
+                <div class="arrow-pointer mb-4 mx-auto w-0 h-0 border-l-[15px] border-r-[15px] border-t-[20px] border-l-transparent border-r-transparent border-t-[#FA4EAB] animate-bounce"></div>
+                
+                <a href="#" target="_blank" class="bg-gradient-to-r from-[#323232] to-[#FA4EAB] text-white font-bold py-3 px-8 rounded-full inline-block shadow-lg hover:shadow-xl hover:scale-105 hover:from-[#FA4EAB] hover:to-[#323232] transition-all duration-300 transform">
+                    Follow Me on Instagram
+                </a>
+            </div>
+        </div>
+    </section>
+
+    
+
+    <!-- YouTube Section -->
+    <section id="youtube" class="py-20 bg-white fade-in">
+        <div class="container mx-auto px-4">
+            <h2 class="text-5xl font-bold mb-5 text-center section-title font-the-seasons">YouTube Content</h2>
+             <p class=" text-xl text-black text-center mb-12 max-w-2xl mx-auto border-b-2 border-pink-300 rounded-lg p-4">Sharing real moments from our big family life—chaos, love, and everything in between.</p>
+            <!-- YouTube Layout: Main Video + Sidebar -->
+            <div class="flex flex-col lg:flex-row items-start gap-6 mb-12">
+                <!-- Main Featured Video -->
+                <div class="lg:w-2/3 flex items-start">
+                    <div class="bg-white rounded-lg overflow-hidden shadow-lg w-full youtube-main-video transition-all duration-300">
+                        <div class="relative">
+                            <iframe class="w-full aspect-video rounded-lg" 
+                                    src="https://www.youtube.com/embed/ZrNzh5nXpU0" 
+                                    title="My Daughter Birthday" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex items-start space-x-4">
+                                <div class="w-12 h-12 rounded-full flex items-center justify-center flex-shrink-0 overflow-hidden">
+                                    <img src="Images/Jessieee.jpg" alt="Logo" class="w-full h-full object-cover rounded-full">
+                                </div>
+                                <div class="flex-1">
+                                    <h3 class="text-xl font-bold text-gray-900 mb-2 hover:underline hover:decoration-black transition duration-300">
+                                        Our daughter is 13! <br>#birthdayvlog #birthday #officiallyateenager #wednesday #hairday
+                                    </h3>
+                                    <p class="text-gray-700 leading-relaxed">
+                                        Watch inspiring content on mum life, kids, autism/ADHD, and  daily vlogs to support , uplift your everyday journey.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Sidebar Videos -->
+                <div class="lg:w-1/3">
+                    <div class="h-[600px] overflow-y-auto space-y-4 pr-2 youtube-sidebar-scroll">
+                        <!-- Sidebar Video 1 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md youtube-video-hover transition-all duration-300">
+                            <div class="flex">
+                                <div class="w-40 flex-shrink-0">
+                                    <iframe class="w-full h-24" 
+                                            src="https://www.youtube.com/embed/eNf-C11LeHc" 
+                                            title="Why Successful People in Fashion Don't Just Stick to One Career Path" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="p-3 flex-1">
+                                    <h4 class="font-semibold text-sm text-gray-900 mb-1 line-clamp-2 hover:underline hover:decoration-black transition duration-300">
+                                       Saying our last goodbye's to our beautiful aunty and our kids nana 🇨🇰♥️
+                                    </h4>
+                                     <p class="text-xs text-black text-lg">Proud.mummy.of.7</p>
+                                    <p class="text-xs text-gray-500">1 month ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    
+                     <!-- Sidebar Video 2 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md youtube-video-hover transition-all duration-300">
+                            <div class="flex">
+                                <div class="w-40 flex-shrink-0">
+                                    <iframe class="w-full h-24" 
+                                            src="https://www.youtube.com/embed/yNWjkAVMyPY" 
+                                            title="Saying our last goodbye's to our beautiful aunty and our kids nana" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="p-3 flex-1">
+                                    <h4 class="font-semibold text-sm text-gray-900 mb-1 line-clamp-2 hover:underline hover:decoration-black transition duration-300">
+                                       Morning skincare routine!<br> #morningvlog #morningskincare #skincare #mumlife
+                                    </h4>
+                                    <p class="text-xs text-black text-lg">Proud.mummy.of.7</p>
+                                    <p class="text-xs text-gray-500">1 year ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+
+                      <!-- Sidebar Video 3 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md youtube-video-hover transition-all duration-300">
+                            <div class="flex">
+                                <div class="w-40 flex-shrink-0">
+                                    <iframe class="w-full h-24" 
+                                            src="https://www.youtube.com/embed/tHpcE2QudOw" 
+                                            title="Saying our last goodbye's to our beautiful aunty and our kids nana" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="p-3 flex-1">
+                                    <h4 class="font-semibold text-sm text-gray-900 mb-1 line-clamp-2 hover:underline hover:decoration-black transition duration-300">
+                                        Daily chats! <br> #mumssupportingmums
+                                    </h4>
+                                    <p class="text-xs text-black text-lg">Proud.mummy.of.7</p>
+                                    <p class="text-xs text-gray-500">5 month ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                     <!-- Sidebar Video 4 -->
+                    <div class="bg-white rounded-lg overflow-hidden shadow-md youtube-video-hover transition-all duration-300">
+                            <div class="flex">
+                                <div class="w-40 flex-shrink-0">
+                                    <iframe class="w-full h-24" 
+                                            src="https://www.youtube.com/embed/cAncAlwReF8" 
+                                            title="Saying our last goodbye's to our beautiful aunty and our kids nana" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="p-3 flex-1">
+                                    <h4 class="font-semibold text-sm text-gray-900 mb-1 line-clamp-2 hover:underline hover:decoration-black transition duration-300">
+                                       Get ready with me! <br> #becoyote #mumlife #mumblog #getreadywithme #makeup
+                                    </h4>
+                                    <p class="text-xs text-black text-lg">Proud.mummy.of.7</p>
+                                    <p class="text-xs text-gray-500">3 month ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Video 6 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md youtube-video-hover transition-all duration-300">
+                            <div class="flex">
+                                <div class="w-40 flex-shrink-0">
+                                    <iframe class="w-full h-24" 
+                                            src="https://www.youtube.com/embed/UQcVHhSd1HE" 
+                                            title="Saying our last goodbye's to our beautiful aunty and our kids nana" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="p-3 flex-1">
+                                    <h4 class="font-semibold text-sm text-gray-900 mb-1 line-clamp-2 hover:underline hover:decoration-black transition duration-300">
+                                        Self-care Sunday! <br> #selfcare #selflove #mumtime #motivation
+                                    </h4>
+                                    <p class="text-xs text-black text-lg">Proud.mummy.of.7</p>
+                                    <p class="text-xs text-gray-500">1 month ago</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sidebar Video 5 -->
+                        <div class="bg-white rounded-lg overflow-hidden shadow-md youtube-video-hover transition-all duration-300">
+                            <div class="flex">
+                                <div class="w-40 flex-shrink-0">
+                                    <iframe class="w-full h-24" 
+                                            src="https://www.youtube.com/embed/Nm2oXTEa9So" 
+                                            title="Saying our last goodbye's to our beautiful aunty and our kids nana" 
+                                            frameborder="0" 
+                                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                                            allowfullscreen>
+                                    </iframe>
+                                </div>
+                                <div class="p-3 flex-1">
+                                    <h4 class="font-semibold text-sm text-gray-900 mb-1 line-clamp-2 hover:underline hover:decoration-black transition duration-300">
+                                        My day in the life! <br> #dayinthelife #mumlife #vlog
+                                    </h4>
+                                    <p class="text-xs text-black text-lg">Proud.mummy.of.7</p>
+                                    <p class="text-xs text-gray-500">2 weeks ago</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center relative">
+                <!-- Arrow pointing to button -->
+                <div class="arrow-pointer mb-4 mx-auto w-0 h-0 border-l-[15px] border-r-[15px] border-t-[20px] border-l-transparent border-r-transparent border-t-[#FA4EAB] animate-bounce"></div>
+                
+                <a href="https://www.youtube.com/channel/UC0ANPMmbDQg8KZfBYflXrnA" target="_blank" class="bg-gradient-to-r from-[#FE83C6] to-[#FFF2F9] text-black font-bold py-3 px-8 rounded-full inline-block shadow-lg hover:shadow-xl hover:scale-105 hover:from-[#FA4EAB] hover:to-[#323232] transition-all duration-300 transform">
+                    Visit My YouTube Channel
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black py-8">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col items-center space-y-4">
+                 <p class="text-white font-bold text-center">Subscribe & Connect</p>
+                <!-- Social Icons -->
+                <div class="flex space-x-4">
+                    <!-- TikTok Icon -->
+                    <a href="https://www.tiktok.com/@jessiengametua/video/7521629606621891858" target="_blank" class="social-icon text-white text-xl hover:text-[#FA4EAB] transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/>
+                        </svg>
+                    </a>
+                    <!-- Instagram Icon -->
+                    <a href="https://www.instagram.com/jessiengametua/" target="_blank" class="social-icon text-white text-xl hover:text-[#FA4EAB] transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
+                            <path d="m16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
+                            <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
+                        </svg>
+                    </a>
+                    <!-- YouTube Icon -->
+                    <a href="https://www.youtube.com/channel/UC0ANPMmbDQg8KZfBYflXrnA" target="_blank" class="social-icon text-white text-xl hover:text-[#FA4EAB] transition-colors duration-300">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22.54 6.42a2.78 2.78 0 0 0-1.94-2C18.88 4 12 4 12 4s-6.88 0-8.6.46a2.78 2.78 0 0 0-1.94 2A29 29 0 0 0 1 11.75a29 29 0 0 0 .46 5.33A2.78 2.78 0 0 0 3.4 19c1.72.46 8.6.46 8.6.46s6.88 0 8.6-.46a2.78 2.78 0 0 0 1.94-2 29 29 0 0 0 .46-5.25 29 29 0 0 0-.46-5.33z"></path>
+                            <polygon points="9.75 15.02 15.5 11.75 9.75 8.48 9.75 15.02"></polygon>
+                        </svg>
+                    </a>
+                </div>
+                <!-- Copyright -->
+                <p class="text-white text-center">© Jessie Ngametua | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Mobile menu close button
+        document.getElementById('mobile-menu-close').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.add('hidden');
+        });
+        
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                const targetElement = document.querySelector(targetId);
+                
+                if (targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                    
+                    // Close mobile menu if open
+                    const mobileMenu = document.getElementById('mobile-menu');
+                    if (!mobileMenu.classList.contains('hidden')) {
+                        mobileMenu.classList.add('hidden');
+                    }
+                }
+            });
+        });
+        
+        // Scroll reveal animation
+        const fadeElements = document.querySelectorAll('.fade-in');
+        
+        const fadeInObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-fadeIn');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        fadeElements.forEach(element => {
+            fadeInObserver.observe(element);
+        });
+    </script>
+    <!-- Image Modal -->
+    <div id="imageModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img id="modalImage" class="modal-image" src="" alt="">
+            <div id="modalTitle" class="modal-title"></div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(imageSrc, title) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            const modalTitle = document.getElementById('modalTitle');
+            
+            modalImage.src = imageSrc;
+            modalTitle.textContent = title;
+            modal.style.display = 'block';
+            
+            // Close modal when clicking outside of it
+            modal.onclick = function(event) {
+                if (event.target === modal) {
+                    closeModal();
+                }
+            }
+        }
+        
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+        }
+        
+        // Close modal with Escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+
+</body>
+</html>
